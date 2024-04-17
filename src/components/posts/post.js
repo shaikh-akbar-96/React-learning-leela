@@ -8,20 +8,26 @@ class Post extends Component {
       { title: "post 2", description: "post 2 description" },
     ],
     postTitle: "Post List",
+    showPost: true,
   };
 
-  updateHandler(e) {
-    e.preventDefault();
+  // updateHandler(e) {
+  //   e.preventDefault();
 
-    this.setState({
-      postTitle: "Modified Title using function",
-    });
-  }
+  //   this.setState({
+  //     postTitle: "Modified Title using function",
+  //   });
+  // }
 
-  updateHandlerViaProperty = (e) => {
-    e.preventDefault();
+  // updateHandlerViaProperty = (e) => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     postTitle: "Modified Title Via Property Method",
+  //   });
+  // };
+  togglePostHandler = () => {
     this.setState({
-      postTitle: "Modified Title Via Property Method",
+      showPost: !this.state.showPost,
     });
   };
   render() {
@@ -39,7 +45,7 @@ class Post extends Component {
         <h2 className="text-2xl my-3">{this.state.postTitle}</h2>
 
         <div className="flex">
-          <a
+          {/* <a
             href="https://www.google.com"
             onClick={this.updateHandler.bind(this)}
             className="flex px-5 py-2 bg-red-500 rounded-3xl text-white w-100"
@@ -52,19 +58,27 @@ class Post extends Component {
             className="flex px-5 py-2 bg-red-500 rounded-3xl text-white w-100"
           >
             Update Post Title
-          </a>
+          </a> */}
+          <button
+            onClick={this.togglePostHandler}
+            className="px-5 py-3 bg-red-500 text-white"
+          >
+            {this.state.showPost ? "Hide Post" : "Show Post"}
+          </button>
         </div>
         <hr />
-        <div className="flex">
-          <SinglePost
-            title={this.state.posts[0].title}
-            description={this.state.posts[0].description}
-          />
-          <SinglePost
-            title={this.state.posts[1].title}
-            description={this.state.posts[1].description}
-          />
-        </div>
+        {this.state.showPost && (
+          <div className="flex">
+            <SinglePost
+              title={this.state.posts[0].title}
+              description={this.state.posts[0].description}
+            />
+            <SinglePost
+              title={this.state.posts[1].title}
+              description={this.state.posts[1].description}
+            />
+          </div>
+        )}
       </div>
     );
   }
