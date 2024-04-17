@@ -7,10 +7,10 @@ import Text from "./components/text/Text";
 function App() {
   return (
     <div className="container mx-auto">
-      <Button name="First Button" />
+      {/* <Button name="First Button" />
       <Button name="Second Button" />
 
-      <Text text="Hello world good morning" />
+      <Text text="Hello world good morning" /> */}
       <br />
       <Post />
     </div>
