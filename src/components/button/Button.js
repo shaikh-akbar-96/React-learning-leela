@@ -1,4 +1,4 @@
-function button(props) {
+function Button(props) {
   return (
     <div className="my-2">
       <button className="bg-red-400 text-white px-5 hover:bg-red-700 py-3 rounded-full">
@@ -8,4 +8,4 @@ function button(props) {
   );
 }
 
-export default button;
+export default Button;
