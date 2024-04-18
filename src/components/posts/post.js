@@ -1,6 +1,6 @@
 import { Component } from "react";
 import SinglePost from "../singlePost/singlePost";
-
+import AddPost from "../addPost/AddPost";
 
 class Post extends Component {
   state = {
@@ -82,6 +82,9 @@ class Post extends Component {
             })}
           </div>
         )}
+        <div className="my-5">
+          <AddPost />
+        </div>
       </div>
     );
   }
