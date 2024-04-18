@@ -21,6 +21,10 @@ class Post extends Component {
     console.log("[post.js] getDerived called");
     return state;
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log("[post.js] should component update");
+    return true;
+  }
   componentDidMount() {
     console.log("componentDidMount called");
   }
@@ -91,6 +95,13 @@ class Post extends Component {
         </div>
       </div>
     );
+  }
+  getSnapshotBeforeUpdate(prevProps, prevstate) {
+    console.log("[post.js] getsnap shot fired");
+    return null;
+  }
+  componentDidUpdate(prevProps, prevstate, snapshot) {
+    console.log("[post.js] component update fired");
   }
 }
 export default Post;
