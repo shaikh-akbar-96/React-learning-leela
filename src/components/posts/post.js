@@ -1,11 +1,13 @@
 import { Component } from "react";
 import SinglePost from "../singlePost/singlePost";
 
+
 class Post extends Component {
   state = {
     posts: [
-      { title: "post 1", description: "post 1 description" },
-      { title: "post 2", description: "post 2 description" },
+      { id: "1", title: "post 1", description: "post 1 description" },
+      { id: "2", title: "post 2", description: "post 2 description" },
+      { id: "3", title: "post 3", description: "post 3 description" },
     ],
     postTitle: "Post List",
     showPost: true,
@@ -69,14 +71,15 @@ class Post extends Component {
         <hr />
         {this.state.showPost && (
           <div className="flex">
-            <SinglePost
-              title={this.state.posts[0].title}
-              description={this.state.posts[0].description}
-            />
-            <SinglePost
-              title={this.state.posts[1].title}
-              description={this.state.posts[1].description}
-            />
+            {this.state.posts.map((post) => {
+              return (
+                <SinglePost
+                  key={post.id}
+                  title={post.title}
+                  description={post.description}
+                />
+              );
+            })}
           </div>
         )}
       </div>
