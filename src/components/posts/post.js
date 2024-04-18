@@ -1,6 +1,7 @@
 import { Component } from "react";
 import SinglePost from "../singlePost/singlePost";
 import AddPost from "../addPost/AddPost";
+import Dialogue from "../dialogue/dialogue";
 
 class Post extends Component {
   state = {
@@ -94,8 +95,15 @@ class Post extends Component {
             })}
           </div>
         )}
-        <div className="my-5">
-          <AddPost />
+        <div className="flex">
+          <div className="my-5 flex-1 w-full">
+            <AddPost />
+          </div>
+          <div className="flex-1">
+            <Dialogue>
+              <div>This is my dialogue data</div>
+            </Dialogue>
+          </div>
         </div>
       </div>
     );
