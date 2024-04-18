@@ -4,30 +4,36 @@ import AddPost from "../addPost/AddPost";
 import Dialogue from "../dialogue/dialogue";
 
 class Post extends Component {
-  state = {
-    posts: [
-      { id: "1", title: "post 1", description: "post 1 description" },
-      { id: "2", title: "post 2", description: "post 2 description" },
-      { id: "3", title: "post 3", description: "post 3 description" },
-    ],
-    postTitle: "Post List",
-    showPost: true,
-  };
-
-  // updateHandler(e) {
-  //   e.preventDefault();
-
-  //   this.setState({
-  //     postTitle: "Modified Title using function",
-  //   });
-  // }
-
-  // updateHandlerViaProperty = (e) => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     postTitle: "Modified Title Via Property Method",
-  //   });
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [
+        { id: "1", title: "post 1", description: "post 1 description" },
+        // { id: "2", title: "post 2", description: "post 2 description" },
+        // { id: "3", title: "post 3", description: "post 3 description" },
+      ],
+      postTitle: "Post List",
+      showPost: true,
+    };
+    console.log("[post.js] costructor called");
+  }
+  static getDerivedStateFromProps(props, state) {
+    console.log("[post.js] getDerived called");
+    return state;
+  }
+  componentDidMount() {
+    console.log("componentDidMount called");
+  }
+  // state = {
+  //   posts: [
+  //     { id: "1", title: "post 1", description: "post 1 description" },
+  //     { id: "2", title: "post 2", description: "post 2 description" },
+  //     { id: "3", title: "post 3", description: "post 3 description" },
+  //   ],
+  //   postTitle: "Post List",
+  //   showPost: true,
   // };
+
   togglePostHandler = () => {
     this.setState({
       showPost: !this.state.showPost,
@@ -45,34 +51,12 @@ class Post extends Component {
     });
   };
   render() {
-    // setTimeout(() => {
-    //   //   console.log("modifying");
-    //   const posts = [...this.state.posts];
-    //   posts[0].title = "Modiefied Post 1 Data";
-    //   posts[1].title = "Modiefied Post 2 Data";
-    //   this.setState(posts);
-    //   this.setState({ postTitle: "Modified Post title" });
-    // }, 3000);
-
+    console.log("[post.js] render called");
     return (
       <div>
         <h2 className="text-2xl my-3">{this.state.postTitle}</h2>
 
         <div className="flex">
-          {/* <a
-            href="https://www.google.com"
-            onClick={this.updateHandler.bind(this)}
-            className="flex px-5 py-2 bg-red-500 rounded-3xl text-white w-100"
-          >
-            Update Post Title
-          </a>
-          <a
-            href="https://www.google.com"
-            onClick={this.updateHandlerViaProperty}
-            className="flex px-5 py-2 bg-red-500 rounded-3xl text-white w-100"
-          >
-            Update Post Title
-          </a> */}
           <button
             onClick={this.togglePostHandler}
             className="px-5 py-3 bg-red-500 text-white"

@@ -1,7 +1,16 @@
 import { Component } from "react";
 
 class SinglePost extends Component {
+  constructor(props) {
+    super(props);
+    console.log("[singlePost.js] constructor called");
+  }
+  static getDerivedStateFromProps(props, state) {
+    console.log("[singlePost.js] getDerivedState called");
+    return state;
+  }
   render() {
+    console.log("[singlePost.js] render Called");
     return (
       <div className="border border-gray-200 shadow m-2 p-2">
         <div className="text-xl font-bold text-blue-600">
@@ -18,6 +27,9 @@ class SinglePost extends Component {
         </div>
       </div>
     );
+  }
+  componentDidMount() {
+    console.log("[singlePost.js] componentDid Mount called");
   }
 }
 
