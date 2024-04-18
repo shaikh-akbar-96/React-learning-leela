@@ -32,6 +32,17 @@ class Post extends Component {
       showPost: !this.state.showPost,
     });
   };
+
+  onChangeTitleHandler = (id, e) => {
+    console.log(e);
+    console.log(id);
+    const postIndex = this.state.posts.findIndex((post) => post.id === id);
+    const posts = [...this.state.posts];
+    posts[postIndex].title = e.target.value;
+    this.setState({
+      posts,
+    });
+  };
   render() {
     // setTimeout(() => {
     //   //   console.log("modifying");
@@ -77,6 +88,7 @@ class Post extends Component {
                   key={post.id}
                   title={post.title}
                   description={post.description}
+                  titlechange={this.onChangeTitleHandler.bind(this, post.id)}
                 />
               );
             })}
