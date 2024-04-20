@@ -1,8 +1,9 @@
 import "./App.css";
-import Button from "./components/button/Button";
+// import Button from "./components/button/Button";
+import Category from "./components/category/category";
 import Post from "./components/posts/post";
 
-import Text from "./components/text/Text";
+// import Text from "./components/text/Text";
 
 function App() {
   return (
@@ -12,7 +13,14 @@ function App() {
 
       <Text text="Hello world good morning" /> */}
       <br />
-      <Post />
+      <div className="w-4/5">
+        <div>
+          <Category name="category" />
+        </div>
+        <div>
+          <Post />
+        </div>
+      </div>
     </div>
   );
 }

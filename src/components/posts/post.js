@@ -9,8 +9,8 @@ class Post extends Component {
     this.state = {
       posts: [
         { id: "1", title: "post 1", description: "post 1 description" },
-        // { id: "2", title: "post 2", description: "post 2 description" },
-        // { id: "3", title: "post 3", description: "post 3 description" },
+        { id: "2", title: "post 2", description: "post 2 description" },
+        { id: "3", title: "post 3", description: "post 3 description" },
       ],
       postTitle: "Post List",
       showPost: true,
