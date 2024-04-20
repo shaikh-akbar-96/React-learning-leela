@@ -1,7 +1,7 @@
 import { Component } from "react";
 import SinglePost from "../singlePost/singlePost";
 import AddPost from "../addPost/AddPost";
-import Dialogue from "../dialogue/dialogue";
+import Dialogue from "../dialogue/Dialogue";
 
 class Post extends Component {
   constructor(props) {

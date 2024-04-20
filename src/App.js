@@ -1,10 +1,9 @@
 import "./App.css";
+// import Category from "./components/category/Category";
 // import Button from "./components/button/Button";
-import Category from "./components/category/category";
-import Post from "./components/posts/post";
-
+import Post from "./components/posts/Post";
+import RefTextInput from "./components/refTextInput/refTextInput";
 // import Text from "./components/text/Text";
-
 function App() {
   return (
     <div className="container mx-auto">
@@ -15,7 +14,8 @@ function App() {
       <br />
       <div className="w-4/5">
         <div>
-          <Category name="category" />
+          {/* <Category name="category" /> */}
+          <RefTextInput />
         </div>
         <div>
           <Post />
