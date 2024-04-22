@@ -2,6 +2,7 @@ import "./App.css";
 // import Category from "./components/category/Category";
 // import Button from "./components/button/Button";
 import Post from "./components/posts/Post";
+import ParentRefTextInput from "./components/refTextInput/ParentRefTextInput";
 import RefTextInput from "./components/refTextInput/refTextInput";
 // import Text from "./components/text/Text";
 function App() {
@@ -15,11 +16,11 @@ function App() {
       <div className="w-4/5">
         <div>
           {/* <Category name="category" /> */}
-          <RefTextInput />
+          <ParentRefTextInput />
         </div>
-        <div>
+        {/* <div>
           <Post />
-        </div>
+        </div> */}
       </div>
     </div>
   );
