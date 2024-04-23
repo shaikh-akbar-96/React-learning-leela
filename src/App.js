@@ -1,5 +1,7 @@
 import "./App.css";
 import CallBackRefTextInput from "./components/callBackRefTextInput/CallBackRefTextInput";
+import ParentCallBackRefTextInput from "./components/callBackRefTextInput/ParentCallBackRefTextInput";
+import ParentForwardingRefButton from "./components/forwardingRef/ParentForwardingRefButton";
 // import Category from "./components/category/Category";
 // import Button from "./components/button/Button";
 import Post from "./components/posts/Post";
@@ -17,10 +19,14 @@ function App() {
       <div className="w-4/5">
         <div>
           {/* <Category name="category" /> */}
+          <ParentForwardingRefButton />
+        </div>
+        <div>
+          {/* <Category name="category" /> */}
           <ParentRefTextInput />
         </div>
         <div>
-          <CallBackRefTextInput />
+          <ParentCallBackRefTextInput />
         </div>
         {/* <div>
           <Post />

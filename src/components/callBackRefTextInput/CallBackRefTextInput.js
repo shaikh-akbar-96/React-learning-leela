@@ -10,7 +10,9 @@ export default class CallBackRefTextInput extends Component {
   }
 
   componentDidMount() {
-    console.log(this.textInput);
+    // console.log(this.textInput);
+    // this.textInput.focus();
+    // this.textInput.value = "Hi Akbar";
   }
   render() {
     return (
@@ -18,8 +20,8 @@ export default class CallBackRefTextInput extends Component {
         <h2>Call Back Ref Input</h2>
         <input
           type="text"
-          className="border border-gray-500"
-          ref={this.inputRef}
+          className="border border-gray-500 py-2 px-2"
+          ref={this.props.inputRef}
         />
       </div>
     );
