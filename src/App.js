@@ -1,4 +1,5 @@
 import "./App.css";
+import CallBackRefTextInput from "./components/callBackRefTextInput/CallBackRefTextInput";
 // import Category from "./components/category/Category";
 // import Button from "./components/button/Button";
 import Post from "./components/posts/Post";
@@ -17,6 +18,9 @@ function App() {
         <div>
           {/* <Category name="category" /> */}
           <ParentRefTextInput />
+        </div>
+        <div>
+          <CallBackRefTextInput />
         </div>
         {/* <div>
           <Post />
