@@ -7,6 +7,7 @@ import ParentForwardingRefButton from "./components/forwardingRef/ParentForwardi
 import Post from "./components/posts/Post";
 import ParentRefTextInput from "./components/refTextInput/ParentRefTextInput";
 import RefTextInput from "./components/refTextInput/refTextInput";
+import TableFragments from "./components/tableFragments/TableFragments";
 // import Text from "./components/text/Text";
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       <Text text="Hello world good morning" /> */}
       <br />
       <div className="w-4/5">
+        <div>
+          <TableFragments />
+        </div>
         <div>
           {/* <Category name="category" /> */}
           <ParentForwardingRefButton />
