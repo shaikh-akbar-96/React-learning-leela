@@ -1,4 +1,7 @@
 import "./App.css";
+import MouseTracker from "./components/MouseTracker/MouseTracker";
+import MouseWithCat from "./components/MouseTracker/MouseWithCat";
+import Cat from "./components/MouseTracker/cat";
 import CallBackRefTextInput from "./components/callBackRefTextInput/CallBackRefTextInput";
 import ParentCallBackRefTextInput from "./components/callBackRefTextInput/ParentCallBackRefTextInput";
 import ParentForwardingRefButton from "./components/forwardingRef/ParentForwardingRefButton";
@@ -12,30 +15,31 @@ import TableFragments from "./components/tableFragments/TableFragments";
 function App() {
   return (
     <div className="container mx-auto">
+      <Cat />
       {/* <Button name="First Button" />
       <Button name="Second Button" />
 
       <Text text="Hello world good morning" /> */}
-      <br />
-      <div className="w-4/5">
-        <div>
+      {/* <br /> */}
+      {/* <div className="w-4/5"> */}
+      {/* <div>
           <TableFragments />
-        </div>
-        <div>
-          {/* <Category name="category" /> */}
-          <ParentForwardingRefButton />
-        </div>
-        <div>
-          {/* <Category name="category" /> */}
-          <ParentRefTextInput />
-        </div>
-        <div>
+        </div> */}
+      {/* <div> */}
+      {/* <Category name="category" /> */}
+      {/* <ParentForwardingRefButton /> */}
+      {/* </div> */}
+      {/* <div> */}
+      {/* <Category name="category" /> */}
+      {/* <ParentRefTextInput /> */}
+      {/* </div> */}
+      {/* <div>
           <ParentCallBackRefTextInput />
-        </div>
-        {/* <div>
+        </div> */}
+      {/* <div>
           <Post />
         </div> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 }
