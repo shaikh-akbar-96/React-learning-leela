@@ -2,6 +2,7 @@ import "./App.css";
 import MouseTracker from "./components/MouseTracker/MouseTracker";
 import MouseWithCat from "./components/MouseTracker/MouseWithCat";
 import Cat from "./components/MouseTracker/cat";
+import UserPropType from "./components/UserPropType/UserPropType";
 import CallBackRefTextInput from "./components/callBackRefTextInput/CallBackRefTextInput";
 import ParentCallBackRefTextInput from "./components/callBackRefTextInput/ParentCallBackRefTextInput";
 import ParentForwardingRefButton from "./components/forwardingRef/ParentForwardingRefButton";
@@ -15,7 +16,8 @@ import TableFragments from "./components/tableFragments/TableFragments";
 function App() {
   return (
     <div className="container mx-auto">
-      <Cat />
+      {/* <Cat /> */}
+      <UserPropType />
       {/* <Button name="First Button" />
       <Button name="Second Button" />
 
